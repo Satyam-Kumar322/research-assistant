@@ -28,6 +28,9 @@ templates = Jinja2Templates(directory="templates")
 app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
 app.include_router(workspace.router, prefix="/api/workspace", tags=["Workspace"])
 
+from routers import chat
+app.include_router(chat.router, prefix="/api/chat", tags=["Chat"]) 
+
 @app.get("/")
 def home(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
@@ -39,6 +42,6 @@ def register_page(request: Request):
 @app.get("/dashboard")
 def dashboard_page(request: Request):
     return templates.TemplateResponse("dashboard.html", {"request": request})
- web: uvicorn main:app --host 0.0.0.0 --port $PORT
-
-web: uvicorn main:app --host 0.0.0.0 --port $PORT
+@app.get("/chat")
+def chat_page(request: Request):
+    return templates.TemplateResponse("chat.html", {"request": request})

@@ -151,22 +151,21 @@
       <div class="brand-icon">🔬</div>
       <span class="brand-name">Research Assistant</span>
     </div>
-    <a class="nav-item active" href="#">
-      <span class="icon">⬡</span> Dashboard
-    </a>
-    <a class="nav-item" href="#">
-      <span class="icon">📁</span> Workspaces
-    </a>
-    <a class="nav-item" href="#">
-      <span class="icon">💬</span> Chat History
-    </a>
-    <a class="nav-item" href="#">
-      <span class="icon">📄</span> Documents
-    </a>
-    <a class="nav-item" href="#">
-      <span class="icon">⚙</span> Settings
-    </a>
-    <div class="sidebar-footer">
+ <a class="nav-item active" href="/dashboard">
+  <span class="icon">🏠</span> Dashboard
+</a>
+<a class="nav-item" href="/chat">
+  <span class="icon">💬</span> Chat
+</a>
+<a class="nav-item" href="/workspaces"
+  <span class="icon">📁</span> Workspaces
+</a>
+<a class="nav-item" href="/documents">
+  <span class="icon">📄</span> Documents
+</a>
+<a class="nav-item" href="/chat">
+  <span class="icon">🕒</span> Chat History
+</a>
       <div class="user-pill">
         <div class="avatar" id="avatarInitial">U</div>
         <div class="user-info">
@@ -286,18 +285,21 @@
         const grid = document.getElementById('workspaceGrid');
         grid.innerHTML = '';
 
-        data.forEach((ws, i) => {
-          const card = document.createElement('div');
-          card.className = 'workspace-card';
-          card.innerHTML = `
-            <div class="ws-icon">${ICONS[i % ICONS.length]}</div>
-            <div class="ws-name">${ws.project_name}</div>
-            <div class="ws-desc">${ws.description || 'No description'}</div>
-            <div class="ws-date">Created ${new Date(ws.created_at).toLocaleDateString()}</div>
-          `;
-          grid.appendChild(card);
-        });
-
+data.forEach((ws, i) => {
+    const card = document.createElement('div');
+    card.className = 'workspace-card';
+    card.style.cursor = 'pointer';
+    card.innerHTML = `
+        <div class="ws-icon">${ICONS[i % ICONS.length]}</div>
+        <div class="ws-name">${ws.project_name}</div>
+        <div class="ws-desc">${ws.description || 'No description'}</div>
+        <div class="ws-date">Created ${new Date(ws.created_at).toLocaleDateString()}</div>
+    `;
+    card.onclick = () => {
+        window.location.href = `/chat?workspace=${ws.workspace_id}`;
+    };
+    grid.appendChild(card);
+});
         // Add "+" card
         const addCard = document.createElement('div');
         addCard.className = 'add-workspace';

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat — Research Assistant</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1117;
+            color: #ffffff;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: #1a1d2e;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .logo { font-size: 20px; font-weight: bold; margin-bottom: 30px; color: #7c6af7; }
+        .nav-item {
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            color: #aaa;
+            text-decoration: none;
+            display: block;
+        }
+        .nav-item:hover, .nav-item.active { background: #2a2d3e; color: #fff; }
+
+        /* Main chat area */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        h2 { margin-bottom: 20px; font-size: 24px; }
+
+        #chatbox {
+            flex: 1;
+            overflow-y: auto;
+            background: #1a1d2e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .msg {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        .user-msg {
+            background: #7c6af7;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+        }
+        .bot-msg {
+            background: #2a2d3e;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+        }
+        .thinking {
+            background: #2a2d3e;
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* Input area */
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+        input {
+            flex: 1;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            background: #1a1d2e;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+        }
+        input:focus { border-color: #7c6af7; }
+        button {
+            padding: 14px 24px;
+            background: #7c6af7;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        button:hover { background: #6a58e0; }
+        button:disabled { background: #444; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">🔬 Research Assistant</div>
+    <a href="/dashboard" class="nav-item">🏠 Dashboard</a>
+    <a href="/chat" class="nav-item active">💬 Chat</a>
+    <a href="#" class="nav-item">📁 Workspaces</a>
+    <a href="#" class="nav-item">📄 Documents</a>
+</div>
+
+<div class="main">
+    <h2>💬 AI Chat</h2>
+
+    <div id="chatbox">
+        <div class="msg bot-msg">👋 Hello! I'm your AI Research Assistant. Ask me anything!</div>
+    </div>
+
+    <div class="input-area">
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Ask something..."
+            onkeypress="if(event.key==='Enter') sendMessage()"
+        />
+        <button id="sendBtn" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    const API_BASE = "http://127.0.0.1:8001";
+    const token = localStorage.getItem("access_token");
+
+    // Redirect to login if no token
+    if (!token) {
+        window.location.href = "/";
+    }
+
+    async function sendMessage() {
+        const input = document.getElementById("userInput");
+        const sendBtn = document.getElementById("sendBtn");
+        const message = input.value.trim();
+        if (!message) return;
+
+        // Show user message
+        addMessage(message, "user-msg");
+        input.value = "";
+        sendBtn.disabled = true;
+
+        // Show thinking indicator
+        const thinkingDiv = addMessage("⏳ Thinking...", "thinking");
+
+        try {
+            const res = await fetch(`${API_BASE}/api/chat/`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({ message: message })
+            });
+
+            const data = await res.json();
+
+            // Remove thinking indicator
+            thinkingDiv.remove();
+
+            if (res.ok) {
+                addMessage(data.reply, "bot-msg");
+            } else {
+                addMessage("❌ Error: " + (data.detail || "Something went wrong"), "bot-msg");
+            }
+        } catch (err) {
+            thinkingDiv.remove();
+            addMessage("❌ Could not connect to server.", "bot-msg");
+        }
+
+        sendBtn.disabled = false;
+    }
+
+    function addMessage(text, className) {
+        const chatbox = document.getElementById("chatbox");
+        const div = document.createElement("div");
+        div.className = "msg " + className;
+        div.innerText = text;
+        chatbox.appendChild(div);
+        chatbox.scrollTop = chatbox.scrollHeight;
+        return div;
+    }
+</script>
+
+</body>
+</html>

@@ -33,3 +33,4 @@ def get_db():
         yield db
     finally:
         db.close()
+# At top with other router imports:

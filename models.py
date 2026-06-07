@@ -1,9 +1,8 @@
+from datetime import datetime
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from database import Base
-
-
 class User(Base):
     __tablename__ = "users"
 
@@ -59,3 +58,12 @@ class Document(Base):
 
     # Relationship
     workspace = relationship("Workspace", back_populates="documents")
+
+class ChatHistory(Base):
+    __tablename__ = "chat_history"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    user_message = Column(String)
+    bot_reply = Column(String)
+    created_at = Column(DateTime, default=datetime.utcnow)
