@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 41,
+    "text": "User Question\n\u2193\nGenerate Query Embedding\n\u2193\nFAISS Similarity Search\n\u2193\nTop-K Relevant Chunks\n\u2193\nGrounded Prompt Builder\n\u2193\nOllama (Llama 3)\n\u2193\nCitation Engine\n\u2193\nFinal Answer with Sources\nFigure 4.8: Retrieval-Augmented Generation Pipeline\nThis architecture minimizes hallucination by forcing the language model to answer\nonly from retrieved document context.\n4.21\nSequence Diagram\nThe interaction between the user and different modules is illustrated below.\nUser\n\u2193\nFrontend\n\u2193\nFastAPI\n\u2193\nRetriever\n\u2193\nFAISS\n\u2193\nPrompt Builder\n\u2193\nOllama\n\u2193\nCitation Engine\n\u2193\nResponse\nFigure 4.9: Simplified Sequence Diagram\n30\n"
+}

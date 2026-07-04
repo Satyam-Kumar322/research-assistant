@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 25,
+    "text": "3.3.1\nPerformance\n\u2022 Fast API Response\n\u2022 Efficient Vector Search\n\u2022 Low Query Latency\n\u2022 Quick Authentication\n3.3.2\nSecurity\nSecurity is achieved using:\n\u2022 JWT Authentication\n\u2022 bcrypt Password Hashing\n\u2022 Protected API Routes\n\u2022 Input Validation\n\u2022 CORS Protection\n3.3.3\nScalability\nThe modular architecture allows:\n\u2022 Multiple Users\n\u2022 Multiple Workspaces\n\u2022 Large Document Collections\n\u2022 Future Cloud Deployment\n3.3.4\nReliability\nThe application provides:\n\u2022 Persistent Storage\n\u2022 Reliable Retrieval\n\u2022 Grounded AI Responses\n\u2022 Error Handling\n14\n"
+}

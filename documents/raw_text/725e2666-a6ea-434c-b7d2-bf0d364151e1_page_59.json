@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 59,
+    "text": "Chapter 6\nResults and Discussion\n6.1\nIntroduction\nThe Intelligent Research Assistant was successfully designed and implemented using\nFastAPI, SQLAlchemy, SQLite, FAISS, Sentence Transformers, Ollama, and Retrieval-\nAugmented Generation (RAG). The developed application provides secure authentica-\ntion, intelligent document management, semantic search, and AI-powered question an-\nswering with citation support.\nThe system was tested using multiple research documents in PDF, DOCX, and TXT\nformats. Experimental evaluation demonstrated that the application performs efficiently\nin document processing, embedding generation, semantic retrieval, and grounded response\ngeneration.\n6.2\nUser Authentication Result\nThe authentication module allows users to register and securely log into the application\nusing email and password.\nPasswords are hashed using the bcrypt algorithm before storage. After successful\nauthentication, a JWT access token is generated for accessing protected resources.\n48\n"
+}

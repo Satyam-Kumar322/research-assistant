@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 33,
+    "text": "4.4.8\nPrompt Builder\nThe prompt builder prepares a grounded prompt using retrieved chunks.\nThe prompt explicitly instructs the language model to answer only from retrieved\ndocuments.\nThis minimizes hallucinations.\n4.4.9\nLanguage Model\nThe generated prompt is forwarded to Ollama running the Llama 3 model locally.\nThe LLM generates a context-aware response using only the supplied evidence.\n4.4.10\nCitation Module\nThe citation engine attaches:\n\u2022 Document Name\n\u2022 Page Number\n\u2022 Chunk Number\n\u2022 Similarity Score\nThis enables users to verify every generated response.\n4.5\nAdvantages of the Architecture\nThe proposed architecture offers numerous benefits.\n\u2022 Modular Design\n\u2022 Easy Maintenance\n\u2022 Secure Authentication\n\u2022 Efficient Vector Search\n\u2022 Grounded AI Responses\n\u2022 Local LLM Execution\n\u2022 Reduced Hallucination\n\u2022 Scalable Deployment\n\u2022 Support for Multiple Users\n22\n"
+}

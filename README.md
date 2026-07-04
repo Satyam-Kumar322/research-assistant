@@ -137,3 +137,40 @@ curl -X GET http://localhost:8000/api/auth/profile \
 2. Generate a strong `SECRET_KEY`: `python -c "import secrets; print(secrets.token_hex(32))"`
 3. Set `DEBUG=False`
 4. Deploy with: `uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4`
+
+---
+
+## 🧠 RAG Architecture & Embedding Workflow
+
+when we are asking question then embeeding is done where 
+User asks question
+      ↓
+STEP 1 — Question sent to Embedding Model
+         (sentence-transformers/all-MiniLM-L6-v2)
+         "What is transformer?" → [0.12, -0.34, 0.56...]
+      ↓
+STEP 2 — Vector Search in FAISS/ChromaDB
+         Find top 5 most similar chunks
+         from YOUR uploaded documents
+      ↓
+STEP 3 — Retrieved chunks sent to Ollama
+         with grounded prompt
+      ↓
+STEP 4 — Llama3 answers ONLY from
+         your document chunks
+      ↓
+STEP 5 — Answer + Citations shown to user
+
+Where Embedding Happens (Two Places)
+Place 1 — During Document Upload (Indexing)
+You upload PDF
+      ↓
+Text extracted (Track 2.2)
+      ↓
+Text cleaned (Track 2.3)
+      ↓
+Text chunked (Track 2.4)
+      ↓
+Each chunk → Embedding Model → Vector
+      ↓
+Vectors stored in FAISS/ChromaDB

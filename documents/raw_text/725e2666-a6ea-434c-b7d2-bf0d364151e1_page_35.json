@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 35,
+    "text": "USERS\n(id)\nname\nemail\npassword\n\u2193\n1\n\u2193\nN\nWORKSPACES\n(workspace id)\nproject name\ndescription\n\u2193\n1\n\u2193\nN\nSESSIONS\n(session id)\nlogin time\nexpiry time\nFigure 4.2: Simplified Entity Relationship Diagram\n4.9\nDatabase Tables\n4.9.1\nUsers Table\nThe Users table stores authentication information.\nField\nType\nDescription\nid\nInteger\nPrimary Key\nname\nString\nUser Name\nemail\nString\nUnique Email\npassword hash\nString\nEncrypted Password\noauth provider\nString\nLogin Provider\ncreated at\nDateTime\nRegistration Time\nTable 4.2: Users Table\n4.9.2\nSessions Table\nThe Sessions table manages user login sessions.\n24\n"
+}

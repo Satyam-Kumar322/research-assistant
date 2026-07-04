@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 40,
+    "text": "2. Recursive Chunking\n3. Semantic Chunking\nExtracted Text\n\u2193\nChunking Engine\n\u2193\nFixed / Recursive / Semantic\n\u2193\nText Chunks\nFigure 4.6: Chunking Workflow\n4.19\nEmbedding Generation Workflow\nEach generated chunk is converted into a dense vector representation using the Sentence\nTransformer embedding model.\nText Chunk\n\u2193\nSentence Transformer\n\u2193\n384-Dimensional Embedding\n\u2193\nNormalization\n\u2193\nFAISS Index\nFigure 4.7: Embedding Generation Workflow\nThe generated embeddings preserve semantic meaning, allowing similar documents to\nbe retrieved even if they do not contain identical keywords.\n4.20\nRetrieval-Augmented Generation (RAG) Pipeline\nThe RAG pipeline combines semantic retrieval with a local Large Language Model.\n29\n"
+}

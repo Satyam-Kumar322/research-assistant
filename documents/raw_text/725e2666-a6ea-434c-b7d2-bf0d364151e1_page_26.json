@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 26,
+    "text": "3.4\nSoftware Requirements\nThe software requirements are shown in Table 3.1.\nOperating System\nWindows 10/11 or Linux\nProgramming Language\nPython 3.11+\nBackend Framework\nFastAPI\nDatabase\nSQLite, MongoDB\nORM\nSQLAlchemy\nEmbedding Model\nall-MiniLM-L6-v2\nVector Database\nFAISS\nLLM\nLlama 3 (Ollama)\nFrontend\nHTML, CSS, JavaScript\nAPI Testing\nSwagger UI, Postman\nIDE\nVisual Studio Code\nVersion Control\nGit\nTable 3.1: Software Requirements\n3.5\nHardware Requirements\nThe minimum hardware requirements are listed in Table 3.2.\nProcessor\nIntel Core i5 or Higher\nRAM\n8 GB Minimum\nStorage\n20 GB Free Space\nGPU\nOptional\nInternet\nRequired for Package Installation\nTable 3.2: Hardware Requirements\n3.6\nTechnology Stack\nThe project uses a modern AI technology stack.\n3.7\nFeasibility Study\nThe project is feasible from multiple perspectives.\n3.7.1\nTechnical Feasibility\nThe required technologies are open source, mature, and compatible with Python.\n15\n"
+}

@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 42,
+    "text": "4.22\nData Flow Diagram\nThe overall data flow of the system is shown below.\nUser\n\u2193\nAuthentication\n\u2193\nWorkspace\n\u2193\nUpload Documents\n\u2193\nProcessing\n\u2193\nChunking\n\u2193\nEmbedding\n\u2193\nVector Storage\n\u2193\nSemantic Search\n\u2193\nAI Response\nFigure 4.10: Data Flow Diagram\n4.23\nComponent Diagram\nThe Intelligent Research Assistant consists of several interacting components.\n31\n"
+}

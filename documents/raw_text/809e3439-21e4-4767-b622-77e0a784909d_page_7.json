@@ -1,0 +1,5 @@
+{
+    "document_id": "809e3439-21e4-4767-b622-77e0a784909d",
+    "page": 7,
+    "text": "Intelligent Research Assistant\nProject Report\n1.3\nProposed Solution\nThe Intelligent Research Assistant solves these problems by utilizing Retrieval-Augmented\nGeneration (RAG). In a RAG architecture, the LLM is not expected to know the an-\nswer from its internal weights. Instead, when a user asks a question, the system first\nretrieves the most relevant paragraphs from the user\u2019s uploaded documents using dense\nvector embeddings. These paragraphs are then injected into the prompt of a localized\nLLM, restricting the LLM to only formulate an answer based on the provided text.\nThis approach guarantees data privacy (since everything can be run locally or on\ntrusted private servers) and virtually eliminates hallucinations, as the LLM is forced to\ncite the exact chunks of text it used to generate the answer.\n2\n"
+}

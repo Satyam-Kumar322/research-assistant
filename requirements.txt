@@ -9,3 +9,16 @@ requests==2.32.3
 jinja2==3.1.4 
 python-multipart==0.0.12 
 aiofiles==24.1.0 
+firebase-admin==7.4.0
+unstructured
+PyMuPDF
+pdfplumber
+PyPDF2
+python-docx
+bcrypt
+
+# ─── RAG Pipeline (Tracks 2.5–2.10) ──────────────────────────────────────────
+sentence-transformers
+faiss-cpu
+numpy
+

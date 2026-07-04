@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 21,
+    "text": "2.11\nSummary\nThe literature survey demonstrates that Retrieval-Augmented Generation has become\none of the most effective approaches for reliable AI-powered question answering.\nBy\ncombining semantic retrieval with local language model inference, the proposed Intelligent\nResearch Assistant provides accurate, transparent, and privacy-preserving responses for\nresearch and document analysis. \u201c\u2018 Retrieval-Augmented Generation (RAG) combines\ndocument retrieval with language generation to improve answer quality [1].\nSentence-BERT generates semantic embeddings for similarity search [2].\nFAISS is widely used for efficient vector similarity search [3].\n10\n"
+}

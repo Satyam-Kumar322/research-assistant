@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 45,
+    "text": "Chapter 5\nImplementation\n5.1\nIntroduction\nThis chapter describes the implementation of the Intelligent Research Assistant. The\nsystem has been developed using Python and FastAPI with a modular architecture.\nEach functionality is implemented as an independent module, making the system scal-\nable, maintainable, and easy to extend. The project integrates secure authentication,\ndocument management, semantic search, Retrieval-Augmented Generation (RAG), and\ncitation generation into a unified research platform.\nThe implementation follows a layered architecture consisting of the Presentation\nLayer, Business Logic Layer, AI Processing Layer, and Data Storage Layer.\n5.2\nProject Directory Structure\nThe project is organized into multiple modules, each responsible for a specific task.\nproject/\n|\n+-- raw_text/\n+-- vector_indices/\n|\n+-- chunking_engine.py\n+-- embedding_engine.py\n+-- vector_store.py\n+-- retrieval_engine.py\n+-- prompt_builder.py\n+-- rag_engine.py\n+-- citation_engine.py\n+-- requirements.txt\n34\n"
+}

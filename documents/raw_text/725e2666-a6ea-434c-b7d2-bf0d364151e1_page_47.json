@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 47,
+    "text": "5.5\nDatabase Layer\nThe database layer is implemented using SQLAlchemy ORM.\nIts responsibilities include:\n\u2022 Creating database engine\n\u2022 Managing database sessions\n\u2022 ORM model mapping\n\u2022 Automatic table creation\n\u2022 Transaction management\nSQLite is used for structured application data, while MongoDB stores uploaded re-\nsearch documents.\n5.6\nAuthentication Module\nThe authentication module provides secure access control using JWT authentication.\nMajor functionalities include:\n\u2022 User Registration\n\u2022 Login\n\u2022 Password Hashing\n\u2022 JWT Token Generation\n\u2022 Session Validation\n\u2022 Protected API Access\n\u2022 Logout\nPasswords are hashed using the bcrypt algorithm before storage, ensuring that plain-\ntext passwords are never stored in the database.\nJWT tokens are generated after successful authentication and are attached to subse-\nquent API requests for accessing protected resources.\n36\n"
+}

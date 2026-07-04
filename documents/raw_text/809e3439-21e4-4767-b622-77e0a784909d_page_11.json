@@ -1,0 +1,5 @@
+{
+    "document_id": "809e3439-21e4-4767-b622-77e0a784909d",
+    "page": 11,
+    "text": "Intelligent Research Assistant\nProject Report\n10\n11\n# Send\nparsing\ntask to background\nqueue\n12\nbackground_tasks .add_task(process_document , content ,\ndocument_metadata .id)\n13\nreturn {\"status\": \"Processing\ninitiated\"}\nListing 1: Example of asynchronous endpoint in FastAPI\n3.3\nDatabase Schema and MongoDB\nMongoDB, a NoSQL document database, aligns perfectly with the unstructured nature\nof chat logs and metadata. The system uses the asynchronous Motor driver. The primary\ncollections are:\n\u2022 users: Stores authentication details and encrypted passwords.\n\u2022 workspaces: Acts as the root container for isolation.\n\u2022 documents: Stores metadata regarding parsed files (filename, upload date, status).\n\u2022 chat_sessions: Stores historical conversational turns grouped by session.\n6\n"
+}

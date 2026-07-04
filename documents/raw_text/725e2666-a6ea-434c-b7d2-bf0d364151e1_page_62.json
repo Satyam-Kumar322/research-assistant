@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 62,
+    "text": "6.7\nVector Database Result\nThe generated vectors are stored inside a FAISS vector database.\nIndependent indexes are maintained for each workspace, allowing efficient similarity\nsearch even when multiple users are working simultaneously.\nThe indexing process completed successfully for all uploaded documents.\n6.8\nSemantic Search Result\nWhen a user submits a research question, the retrieval engine generates an embedding\nfor the query and searches the FAISS database.\nThe system successfully retrieves the most relevant chunks according to cosine simi-\nlarity.\nThe retrieved chunks form the contextual knowledge supplied to the Large Language\nModel.\n6.9\nRAG Response Result\nThe Retrieval-Augmented Generation pipeline successfully generated grounded responses\nusing only the retrieved document context.\nThe implemented prompt builder effectively reduced hallucinations by preventing the\nlanguage model from using external knowledge.\nFigure 6.4: Question Answering using RAG\n51\n"
+}

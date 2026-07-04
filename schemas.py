@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr, field_validator
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
 
 
@@ -56,6 +56,11 @@ class TokenData(BaseModel):
     email: Optional[str] = None
 
 
+class GoogleAuthRequest(BaseModel):
+    id_token: str
+
+
+
 # ─── Workspace Schemas ────────────────────────────────────────────────────────
 
 class WorkspaceCreate(BaseModel):
@@ -86,3 +91,91 @@ class WorkspaceResponse(BaseModel):
 class MessageResponse(BaseModel):
     message: str
     success: bool = True
+
+
+# ─── Document Schemas ────────────────────────────────────────────────────────
+
+class DocumentResponse(BaseModel):
+    document_id: str
+    workspace_id: int
+    title: Optional[str]
+    authors: Optional[str]
+    path: str
+    original_filename: Optional[str] = None
+    file_type: Optional[str] = None
+    file_size_bytes: Optional[int] = None
+    page_count: Optional[int] = None
+    keywords: Optional[str] = None
+    upload_date: datetime
+
+    class Config:
+        from_attributes = True
+
+
+class DocumentMetadata(BaseModel):
+    title: Optional[str] = None
+    authors: Optional[str] = None
+    year: Optional[str] = None
+    page_count: Optional[int] = None
+    file_size_bytes: Optional[int] = None
+    keywords: Optional[str] = None
+    doi: Optional[str] = None
+
+
+class DocumentTextOutput(BaseModel):
+    document_id: str
+    page: int
+    text: str
+
+
+# ─── RAG Schemas (Tracks 2.4–2.10) ──────────────────────────────────────────
+
+class RAGQueryRequest(BaseModel):
+    question: str
+    workspace_id: int
+    top_k: int = 5
+    similarity_threshold: float = 0.75
+    chunking_strategy: str = "recursive"
+
+
+class CitationResponse(BaseModel):
+    document: str
+    document_id: str
+    page: int
+    chunk: int
+    chunk_id: str
+    similarity_score: float = 0.0
+
+
+class RAGQueryResponse(BaseModel):
+    answer: str
+    sources: List[CitationResponse] = []
+    sources_text: str = ""
+    chunks_used: int = 0
+
+
+class EmbeddingRequest(BaseModel):
+    text: str
+
+
+class EmbeddingResponse(BaseModel):
+    text: str
+    vector: List[float]
+    dimension: int
+
+
+class VectorSearchRequest(BaseModel):
+    query: str
+    workspace_id: int
+    top_k: int = 5
+    similarity_threshold: float = 0.0
+
+
+class ChunkResponse(BaseModel):
+    chunk_id: str
+    document_id: str
+    page: Optional[int] = None
+    chunk_text: str
+    chunk_index: int
+    similarity_score: float = 0.0
+

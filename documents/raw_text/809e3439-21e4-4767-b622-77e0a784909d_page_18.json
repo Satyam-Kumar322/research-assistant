@@ -1,0 +1,5 @@
+{
+    "document_id": "809e3439-21e4-4767-b622-77e0a784909d",
+    "page": 18,
+    "text": "Intelligent Research Assistant\nProject Report\nTo mitigate this, the architecture specifies that document processing must be offloaded\nto FastAPI\u2019s BackgroundTasks, allowing the HTTP response to return immediately while\nthe heavy computation runs asynchronously.\n13\n"
+}

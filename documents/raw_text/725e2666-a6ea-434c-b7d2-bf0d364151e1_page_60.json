@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 60,
+    "text": "Figure 6.1: User Login Page\n6.3\nWorkspace Management Result\nAuthenticated users can create multiple research workspaces.\nEach workspace stores uploaded research documents independently, ensuring complete\nproject isolation.\nFigure 6.2: Workspace Dashboard\n6.4\nDocument Upload Result\nThe application supports uploading documents in PDF, DOCX, and TXT formats.\n49\n"
+}

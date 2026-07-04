@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 19,
+    "text": "\u2022 384-dimensional embeddings\nThese embeddings are stored inside the FAISS vector database for efficient retrieval.\n2.6\nFAISS Vector Database\nFacebook AI Similarity Search (FAISS) is an open-source library developed by Meta for\nefficient similarity search over high-dimensional vectors.\nFAISS provides:\n\u2022 Fast nearest-neighbor search\n\u2022 Scalable indexing\n\u2022 Low memory usage\n\u2022 High search performance\n\u2022 Support for cosine similarity\nThe proposed system maintains a separate vector index for each workspace to improve\nscalability and organization.\n2.7\nFastAPI Framework\nFastAPI is a modern Python web framework designed for high-performance REST API\ndevelopment.\nIts key advantages include:\n\u2022 High execution speed\n\u2022 Automatic API documentation\n\u2022 Pydantic-based validation\n\u2022 Asynchronous request handling\n\u2022 Easy integration with AI libraries\nThese features make FastAPI suitable for implementing intelligent backend systems.\n8\n"
+}

@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 54,
+    "text": "5.18\nCitation Engine\nThe Citation Engine provides transparency for every generated answer.\nInstead of producing unsupported responses, the system identifies the exact source of\nevery retrieved statement.\nEach citation includes:\n\u2022 Document Name\n\u2022 Document ID\n\u2022 Page Number\n\u2022 Chunk Number\n\u2022 Similarity Score\nDuplicate citations are automatically removed before presenting the final response.\nThis enables users to verify generated answers directly from the original document.\n5.19\nAdvantages of the AI Implementation\nThe implemented AI pipeline provides several advantages.\n\u2022 Secure local AI execution\n\u2022 Fast semantic retrieval\n\u2022 Workspace isolation\n\u2022 High retrieval accuracy\n\u2022 Reduced hallucination\n\u2022 Explainable AI through citations\n\u2022 Modular implementation\n\u2022 Easy future scalability\n\u2022 Support for multiple document formats\n43\n"
+}

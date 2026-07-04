@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 44,
+    "text": "4.25\nChapter Summary\nThis chapter presented the complete system architecture of the Intelligent Research As-\nsistant.\nThe discussion included authentication, document processing, chunking, em-\nbedding generation, vector storage, retrieval, prompt generation, citation handling, and\nthe Retrieval-Augmented Generation pipeline. The modular design improves scalability,\nsecurity, maintainability, and overall system performance.\n33\n"
+}

@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 24,
+    "text": "3.2.6\nEmbedding Generation\nThe application shall:\n\u2022 Generate Sentence Embeddings\n\u2022 Normalize Embeddings\n\u2022 Batch Processing\n\u2022 Store Embedding Vectors\n3.2.7\nVector Search\nThe vector database shall provide:\n\u2022 FAISS Index Creation\n\u2022 Fast Similarity Search\n\u2022 Top-K Retrieval\n\u2022 Workspace Isolation\n\u2022 Persistent Storage\n3.2.8\nQuestion Answering\nThe AI module shall:\n\u2022 Retrieve Relevant Chunks\n\u2022 Build Grounded Prompt\n\u2022 Send Prompt to Ollama\n\u2022 Generate AI Response\n\u2022 Produce Source Citations\n3.3\nNon-Functional Requirements\nThe developed application satisfies several non-functional requirements.\n13\n"
+}

@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 30,
+    "text": "\u2022 Dashboard\n\u2022 Workspace Interface\n\u2022 Chat Interface\n\u2022 Document Upload\n4.3.2\nApplication Layer\nThe application layer is implemented using FastAPI.\nResponsibilities include:\n\u2022 API Routing\n\u2022 Authentication\n\u2022 Business Logic\n\u2022 Request Validation\n\u2022 Response Generation\n4.3.3\nData Layer\nThe application stores different types of data using different storage systems.\nData Type\nStorage Technology\nUsers\nSQLite\nSessions\nSQLite\nWorkspaces\nSQLite\nDocuments\nMongoDB\nVectors\nFAISS\nMetadata\nJSON Files\nTable 4.1: Data Storage Architecture\n4.4\nModule Architecture\nThe application consists of several independent modules.\n19\n"
+}

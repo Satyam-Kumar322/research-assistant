@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 23,
+    "text": "3.2.2\nWorkspace Management\nThe system shall allow users to:\n\u2022 Create Personal Workspace\n\u2022 View Existing Workspaces\n\u2022 Delete Workspace\n\u2022 Maintain Multiple Research Projects\n3.2.3\nDocument Management\nUsers shall be able to:\n\u2022 Upload PDF files\n\u2022 Upload DOCX files\n\u2022 Upload TXT files\n\u2022 Delete Documents\n\u2022 View Uploaded Documents\n\u2022 Store Document Metadata\n3.2.4\nDocument Processing\nThe document processing module shall:\n\u2022 Extract Text\n\u2022 Extract Metadata\n\u2022 Detect Empty Pages\n\u2022 Process Multiple File Types\n3.2.5\nChunking Module\nThe system supports three chunking techniques:\n\u2022 Fixed Size Chunking\n\u2022 Recursive Chunking\n\u2022 Semantic Chunking\n12\n"
+}

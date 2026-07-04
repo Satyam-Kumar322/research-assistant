@@ -9,11 +9,8 @@ load_dotenv()
 # Use SQLite for development, PostgreSQL for production
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "sqlite:///./research_assistant.db"  # Default: SQLite for easy local setup
+    "sqlite:///./research_assistant.db"
 )
-
-# For PostgreSQL (production), use:
-# DATABASE_URL = "postgresql://user:password@localhost:5432/research_assistant"
 
 connect_args = {}
 if DATABASE_URL.startswith("sqlite"):
@@ -33,4 +30,3 @@ def get_db():
         yield db
     finally:
         db.close()
-# At top with other router imports:

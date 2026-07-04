@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 31,
+    "text": "4.4.1\nAuthentication Module\nThe authentication module provides:\n\u2022 User Registration\n\u2022 Secure Login\n\u2022 Password Hashing\n\u2022 JWT Token Generation\n\u2022 Session Management\n4.4.2\nWorkspace Module\nEach authenticated user owns one or more workspaces.\nEach workspace stores:\n\u2022 Uploaded Documents\n\u2022 Generated Embeddings\n\u2022 FAISS Index\n\u2022 Chat History\n4.4.3\nDocument Processing Module\nThe document processing module performs:\n\u2022 PDF Processing\n\u2022 DOCX Processing\n\u2022 TXT Processing\n\u2022 Metadata Extraction\n\u2022 Page Extraction\n20\n"
+}

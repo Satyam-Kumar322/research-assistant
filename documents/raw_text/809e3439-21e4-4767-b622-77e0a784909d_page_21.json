@@ -1,0 +1,5 @@
+{
+    "document_id": "809e3439-21e4-4767-b622-77e0a784909d",
+    "page": 21,
+    "text": "Intelligent Research Assistant\nProject Report\n10\nReferences\n[1] Lewis, P., Perez, E., Piktus, A., et al. (2020). Retrieval-Augmented Generation\nfor Knowledge-Intensive NLP Tasks. Advances in Neural Information Processing\nSystems.\n[2] Johnson, J., Douze, M., & J\u00e9gou, H. (2019). Billion-scale similarity search with\nGPUs (FAISS). IEEE Transactions on Big Data.\n[3] FastAPI Documentation.\n(2024).\nFastAPI: High performance web framework.\nAvailable at: https://fastapi.tiangolo.com/\n[4] MongoDB Inc. (2024). Motor: Asynchronous Python driver for MongoDB. Avail-\nable at: https://motor.readthedocs.io/\n[5] Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention Is All You Need.\n31st Conference on Neural Information Processing Systems (NIPS 2017).\n[6] Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence Embeddings us-\ning Siamese BERT-Networks. Proceedings of the 2019 Conference on Empirical\nMethods in Natural Language Processing.\n16\n"
+}

@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 43,
+    "text": "Frontend\n\u2193\nFastAPI Backend\n\u2193\nAuthentication\n\u2193\nWorkspace Manager\n\u2193\nDocument Processor\n\u2193\nChunking Engine\n\u2193\nEmbedding Engine\n\u2193\nVector Store\n\u2193\nRetriever\n\u2193\nPrompt Builder\n\u2193\nOllama LLM\n\u2193\nCitation Engine\nFigure 4.11: Component Diagram\n4.24\nAdvantages of the Proposed Design\nThe proposed architecture provides several important advantages.\n\u2022 Modular implementation\n\u2022 Easy maintenance\n\u2022 Secure authentication\n\u2022 Workspace isolation\n\u2022 Fast semantic search\n\u2022 Local AI inference\n\u2022 Explainable answers with citations\n\u2022 Reduced hallucination\n\u2022 Efficient storage management\n\u2022 Scalable deployment\n32\n"
+}

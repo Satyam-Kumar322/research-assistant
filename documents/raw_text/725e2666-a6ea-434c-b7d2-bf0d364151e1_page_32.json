@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 32,
+    "text": "4.4.4\nChunking Module\nAfter extracting text, the system splits documents into meaningful chunks.\nThe implemented strategies include:\n1. Fixed Size Chunking\n2. Recursive Chunking\n3. Semantic Chunking\nThese chunks improve semantic retrieval accuracy.\n4.4.5\nEmbedding Module\nEach chunk is converted into a numerical vector using the Sentence Transformer model.\nThe generated embeddings are normalized before indexing into FAISS.\n4.4.6\nVector Database\nThe vector database stores document embeddings.\nFeatures include:\n\u2022 Persistent Storage\n\u2022 Fast Similarity Search\n\u2022 Workspace Isolation\n\u2022 Incremental Updates\n\u2022 Efficient Retrieval\n4.4.7\nRetrieval Module\nThe retrieval engine performs:\n1. Query Embedding\n2. Similarity Search\n3. Ranking\n4. Top-K Retrieval\n5. Threshold Filtering\n21\n"
+}

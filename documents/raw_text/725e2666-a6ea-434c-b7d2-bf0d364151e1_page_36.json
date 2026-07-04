@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 36,
+    "text": "Field\nType\nDescription\nsession id\nUUID\nPrimary Key\nuser id\nInteger\nForeign Key\nlogin time\nDateTime\nLogin Timestamp\nexpiry time\nDateTime\nSession Expiry\nTable 4.3: Sessions Table\n4.9.3\nWorkspace Table\nEach authenticated user owns one or more workspaces.\nField\nType\nDescription\nworkspace id\nInteger\nPrimary Key\nuser id\nInteger\nForeign Key\nproject name\nString\nWorkspace Name\ndescription\nText\nDescription\nTable 4.4: Workspace Table\n4.10\nMongoDB Storage Design\nMongoDB is used to store uploaded documents and extracted information.\nEach uploaded document stores the following metadata.\n\u2022 Document ID\n\u2022 Original Filename\n\u2022 Workspace ID\n\u2022 Page Count\n\u2022 Author\n\u2022 Keywords\n\u2022 File Size\n\u2022 Upload Timestamp\nThe extracted pages are stored separately for efficient processing during chunk gen-\neration.\n25\n"
+}

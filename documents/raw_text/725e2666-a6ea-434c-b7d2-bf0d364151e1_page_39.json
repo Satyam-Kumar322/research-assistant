@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 39,
+    "text": "User\n\u2193\nEnter Email and Password\n\u2193\nFastAPI Authentication API\n\u2193\nPassword Verification (bcrypt)\n\u2193\nJWT Token Generation\n\u2193\nAuthenticated User\n\u2193\nDashboard Access\nFigure 4.4: Authentication Workflow\n4.17\nDocument Processing Workflow\nAfter authentication, users can upload research documents. The uploaded files are pro-\ncessed before semantic indexing.\nUpload Document\n\u2193\nFile Validation\n\u2193\nPDF / DOCX / TXT Processor\n\u2193\nText Extraction\n\u2193\nMetadata Extraction\n\u2193\nStore Processed Text\nFigure 4.5: Document Processing Workflow\nThe document processing module extracts textual information from supported file\nformats while preserving metadata such as author, page number, keywords, and document\ntitle.\n4.18\nChunking Workflow\nLarge documents are divided into smaller semantic units to improve retrieval performance.\nThe project implements three chunking strategies.\n1. Fixed Size Chunking\n28\n"
+}

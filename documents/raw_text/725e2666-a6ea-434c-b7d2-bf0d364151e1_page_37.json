@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 37,
+    "text": "4.11\nVector Database Design\nSemantic document retrieval requires efficient storage of embedding vectors.\nThe system uses FAISS (Facebook AI Similarity Search) for this purpose.\nEach workspace maintains an independent vector index.\nEach vector entry contains:\n\u2022 Chunk ID\n\u2022 Document ID\n\u2022 Page Number\n\u2022 Chunk Index\n\u2022 Chunk Text\n\u2022 384-Dimensional Embedding Vector\nWorkspace isolation prevents vectors from different projects from mixing.\n4.12\nFAISS Storage Architecture\nThe storage hierarchy is organized as follows:\ndocuments/\n\u2014\n+\u2013 vector indices/\n\u2014\n+\u2013 Workspace 1/\n\u2014\n\u2014\u2013 faiss.index\n\u2014\u2013 chunk meta.json\n\u2014\n+\u2013 Workspace 2/\n\u2014\n\u2014\u2013 faiss.index\n\u2014\u2013 chunk meta.json\n\u2014\n+\u2013 Workspace N/\nFigure 4.3: Workspace-wise FAISS Storage\n26\n"
+}

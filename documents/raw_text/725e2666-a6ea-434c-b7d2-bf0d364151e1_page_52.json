@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 52,
+    "text": "\u2022 Metadata storage\nEach indexed chunk stores the following information:\n\u2022 Chunk ID\n\u2022 Document ID\n\u2022 Page Number\n\u2022 Chunk Index\n\u2022 Chunk Text\n\u2022 Embedding Vector\nThe metadata is stored in JSON format while the vector representations are stored\nin FAISS index files.\n5.15\nRetrieval Engine\nThe retrieval engine identifies the most relevant document chunks corresponding to the\nuser\u2019s query.\nThe retrieval process consists of the following steps:\n1. Receive User Question\n2. Generate Query Embedding\n3. Search FAISS Index\n4. Compute Cosine Similarity\n5. Filter Low Similarity Results\n6. Return Top-K Chunks\nThe retrieval engine supports configurable values for:\n\u2022 Top-K Retrieval\n\u2022 Similarity Threshold\n\u2022 Workspace Filtering\nThis design significantly improves retrieval accuracy while minimizing irrelevant doc-\nument retrieval.\n41\n"
+}

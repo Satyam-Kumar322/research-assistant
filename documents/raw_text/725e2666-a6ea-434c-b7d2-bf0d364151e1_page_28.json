@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 28,
+    "text": "Chapter 4\nSystem Design and Architecture\n4.1\nIntroduction\nThe Intelligent Research Assistant is designed using a modular and scalable architecture.\nEach module performs a specific responsibility while interacting with other components\nthrough well-defined interfaces. This modular design improves maintainability, scalabil-\nity, and future extensibility.\nThe system integrates secure authentication, workspace management, document pro-\ncessing, semantic search, Retrieval-Augmented Generation (RAG), and citation genera-\ntion into a unified platform.\n4.2\nOverall System Architecture\nThe overall workflow of the system is illustrated in Figure 4.1.\n17\n"
+}

@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 53,
+    "text": "5.16\nGrounded Prompt Builder\nAfter retrieving relevant chunks, the Prompt Builder constructs a grounded prompt for\nthe Large Language Model.\nThe prompt contains:\n\u2022 System Instructions\n\u2022 Retrieved Context\n\u2022 Source Information\n\u2022 User Question\nThe prompt explicitly instructs the language model to answer only from the supplied\ncontext and avoid using external knowledge.\nThis strategy minimizes hallucination and improves answer reliability.\n5.17\nRetrieval-Augmented Generation Engine\nThe Retrieval-Augmented Generation (RAG) engine combines semantic retrieval with a\nlocal Large Language Model.\nThe implemented workflow is:\n1. Receive Question\n2. Retrieve Relevant Chunks\n3. Build Grounded Prompt\n4. Send Prompt to Ollama\n5. Generate AI Response\n6. Generate Citations\n7. Return Final Answer\nThe project uses the locally deployed Llama 3 model through the Ollama framework.\nLocal execution improves privacy since uploaded research documents never leave the\nuser\u2019s computer.\n42\n"
+}

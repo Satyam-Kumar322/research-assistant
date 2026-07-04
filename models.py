@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Boolean
+from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from database import Base
@@ -50,20 +50,45 @@ class Workspace(Base):
 class Document(Base):
     __tablename__ = "documents"
 
-    id = Column(Integer, primary_key=True, index=True)
+    document_id = Column(String(36), primary_key=True, index=True)
     workspace_id = Column(Integer, ForeignKey("workspaces.workspace_id"), nullable=False)
-    filename = Column(String(300), nullable=False)
-    file_path = Column(String(500), nullable=False)
-    uploaded_at = Column(DateTime(timezone=True), server_default=func.now())
+    title = Column(String(500), nullable=True)
+    authors = Column(String(1000), nullable=True)
+    path = Column(String(500), nullable=False)
+    original_filename = Column(String(500), nullable=True)
+    file_type = Column(String(20), nullable=True)
+    file_size_bytes = Column(Integer, nullable=True)
+    page_count = Column(Integer, nullable=True)
+    keywords = Column(String(2000), nullable=True)
+    upload_date = Column(DateTime(timezone=True), server_default=func.now())
+
+    # Relationships
+    workspace = relationship("Workspace", back_populates="documents")
+    chunks = relationship("DocumentChunk", back_populates="document", cascade="all, delete-orphan")
+
+
+class DocumentChunk(Base):
+    """Track 2.4: Stores chunk metadata for the chunking engine."""
+    __tablename__ = "document_chunks"
+
+    chunk_id = Column(String(36), primary_key=True, index=True)
+    document_id = Column(String(36), ForeignKey("documents.document_id"), nullable=False)
+    page = Column(Integer, nullable=True)
+    chunk_text = Column(Text, nullable=False)
+    chunk_index = Column(Integer, nullable=False)
+    strategy = Column(String(20), nullable=True)  # fixed / recursive / semantic
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     # Relationship
-    workspace = relationship("Workspace", back_populates="documents")
+    document = relationship("Document", back_populates="chunks")
+
 
 class ChatHistory(Base):
     __tablename__ = "chat_history"
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
+    session_id = Column(String, index=True)
     user_message = Column(String)
     bot_reply = Column(String)
     created_at = Column(DateTime, default=datetime.utcnow)

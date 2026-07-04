@@ -1,0 +1,5 @@
+{
+    "document_id": "809e3439-21e4-4767-b622-77e0a784909d",
+    "page": 13,
+    "text": "Intelligent Research Assistant\nProject Report\n4.2\nVector Storage with FAISS\nFAISS (Facebook AI Similarity Search) is heavily utilized to optimize the retrieval mech-\nanism. Rather than hosting an external vector database (which increases latency and\ndeployment complexity), the application maintains independent FAISS indices directly\non the local filesystem.\nEach Workspace possesses its own physical directory and its own faiss.index file.\nThis design choice provides absolute data isolation.\nWhen a user queries Workspace\nA, the system physically cannot leak vectors from Workspace B, solving major security\nconcerns in multi-tenant environments.\nWhen a query is made, FAISS executes an exhaustive inner-product search. Because\nlocal FAISS runs entirely in RAM via highly optimized C++ binaries, retrieving the\ntop-5 relevant chunks from a database of 100,000 chunks takes less than 5 milliseconds\non standard CPU hardware.\n8\n"
+}

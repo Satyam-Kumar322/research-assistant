@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 29,
+    "text": "User\n\u2193\nFrontend (HTML + CSS + JavaScript)\n\u2193\nFastAPI Backend\n\u2193\nAuthentication Module (JWT + bcrypt)\n\u2193\nWorkspace Manager\n\u2193\nDocument Processing Module\n\u2193\nChunking Engine\n\u2193\nEmbedding Engine\n\u2193\nFAISS Vector Database\n\u2193\nRetriever\n\u2193\nPrompt Builder\n\u2193\nOllama (Llama 3)\n\u2193\nCitation Engine\n\u2193\nFinal Response with Sources\nFigure 4.1: Overall System Architecture\nThe architecture follows a layered approach where each module communicates only\nwith the adjacent layer. Such a design minimizes coupling and improves modularity.\n4.3\nArchitecture Layers\nThe system consists of the following layers.\n4.3.1\nPresentation Layer\nThe presentation layer consists of HTML templates, CSS styling, and JavaScript.\nIts responsibilities include:\n\u2022 User Registration\n\u2022 Login\n18\n"
+}

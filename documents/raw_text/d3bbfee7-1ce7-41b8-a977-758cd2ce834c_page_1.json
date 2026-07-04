@@ -1,0 +1,5 @@
+{
+    "document_id": "d3bbfee7-1ce7-41b8-a977-758cd2ce834c",
+    "page": 1,
+    "text": "Basic Chatbot \nArchitecture: \nUser \n \u2193 \nFrontend \n \u2193 \nBackend API \n \u2193 \nLocal LLM \n \u2193 \nAnswer \n \nTechnical \n\u2022 \nChat API  \n\u2022 \nLocal LLM integration  \n\u2022 \nFrontend chat page  \n \n"
+}

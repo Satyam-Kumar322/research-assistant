@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 11,
+    "text": "List of Tables\n3.1\nSoftware Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n15\n3.2\nHardware Requirements\n. . . . . . . . . . . . . . . . . . . . . . . . . . .\n15\n3.3\nTechnology Stack . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n16\n4.1\nData Storage Architecture . . . . . . . . . . . . . . . . . . . . . . . . . .\n19\n4.2\nUsers Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n24\n4.3\nSessions Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n25\n4.4\nWorkspace Table\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n25\n4.5\nStorage Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n27\n5.1\nSoftware Development Environment . . . . . . . . . . . . . . . . . . . . .\n35\n5.2\nREST API Modules\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n45\n5.3\nModule Testing Results . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n46\nx\n"
+}

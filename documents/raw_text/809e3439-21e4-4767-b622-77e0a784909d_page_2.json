@@ -1,0 +1,5 @@
+{
+    "document_id": "809e3439-21e4-4767-b622-77e0a784909d",
+    "page": 2,
+    "text": "Intelligent Research Assistant\nProject Report\nThis report details the design, architecture, and implementation of the\nIntelligent Research Assistant\u2014a modern, web-based platform that\nleverages Retrieval-Augmented Generation (RAG) and Large\nLanguage Models (LLMs) to facilitate advanced document analysis.\nBy combining an asynchronous Python backend (FastAPI), a NoSQL\ndatabase (MongoDB), highly efficient vector similarity search (FAISS),\nand a visually striking Vanilla JS frontend utilizing Glassmorphism\ndesign principles, the system achieves state-of-the-art performance in\npersonal knowledge management. This document spans over the\ncomprehensive software engineering lifecycle, highlighting system\nrequirements, theoretical background, architectural diagrams,\nimplementation specifics, and future optimization paths.\nJune 25, 2026\n2\n"
+}

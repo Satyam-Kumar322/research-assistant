@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 61,
+    "text": "During upload, the system extracts text, metadata, and prepares documents for se-\nmantic indexing.\nFigure 6.3: Document Upload Interface\n6.5\nChunk Generation Result\nAfter extraction, documents are divided into smaller chunks.\nThe implemented chunking strategies preserve semantic information while maintaining\nefficient retrieval performance.\nThe generated chunks are stored along with metadata including:\n\u2022 Document ID\n\u2022 Page Number\n\u2022 Chunk ID\n\u2022 Chunk Index\n6.6\nEmbedding Generation Result\nEach generated chunk is converted into a 384-dimensional embedding vector using the\nSentence Transformer model.\nThe embedding process enables semantic similarity search instead of keyword match-\ning.\nNormalized embeddings improve cosine similarity calculations during retrieval.\n50\n"
+}

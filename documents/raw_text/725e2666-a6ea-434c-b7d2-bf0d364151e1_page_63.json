@@ -1,0 +1,5 @@
+{
+    "document_id": "725e2666-a6ea-434c-b7d2-bf0d364151e1",
+    "page": 63,
+    "text": "6.10\nCitation Result\nEvery generated response includes citations indicating the document name and page\nnumber from which the information was retrieved.\nThis significantly improves transparency and enables users to verify generated answers\ndirectly from the original research documents.\n6.11\nPerformance Evaluation\nThe developed application demonstrated satisfactory performance during experimental\nevaluation.\nMajor observations include:\n\u2022 Fast document upload\n\u2022 Efficient text extraction\n\u2022 Accurate chunk generation\n\u2022 High semantic retrieval accuracy\n\u2022 Fast response generation\n\u2022 Reliable citation generation\n\u2022 Secure authentication\n\u2022 Simple user interface\n6.12\nAdvantages of the Developed System\nThe developed Intelligent Research Assistant provides several advantages.\n\u2022 AI-powered research assistance\n\u2022 Fast semantic document search\n\u2022 Local LLM execution using Ollama\n\u2022 Privacy-preserving architecture\n\u2022 Citation-supported responses\n\u2022 Modular implementation\n52\n"
+}
